@@ -1,0 +1,61 @@
+Typescript is a strongly typed language
+and is statically typed and types are checked at compile time
+benefits:   Self-documenting
+            Catch errors in development
+            Great for teams
+
+Typescript will infers a datatype based on the data assigned implicitly
+You can state the type doing it explicitly using a colon : like:
+                                                            let myName: string = 'Dave';
+You can defined union types which can hold 2 different types using the pipe like:
+                                                    let myName: string | number;
+
+TypeScript needs explicitly defined function parameters or it will assume the parameters are any type once they are defined typescript can infer the return type
+
+Typescript datatypes include:
+    boolean
+        Can hold a value of true false
+    number
+        holds numbers including decimal values
+    string
+        holds "strings"
+    array
+        holds arrays and can be resctricted to certain data types using generics like so : let list: Array<number> = [1, 2, 3];
+    tuple
+        allows defining of an array with a fixed number of elements whose types are known but do not need to be the same for example
+        // Declare a tuple type
+            let x: [string, number];
+        // Initialize it
+            x = ["hello", 10]; // OK
+        // Initialize it incorrectly
+            x = [10, "hello"]; // Error
+    enum
+        A helpful addition to the standard set of datatypes from JavaScript is the enum. As in languages like C#, an enum is a way of giving more friendly names to sets of numeric values.
+        enum 
+            Color {
+                Red,
+                Green,
+                Blue,
+            }
+            let c: Color = Color.Green;
+        By default, enums begin numbering their members starting at 0. You can change this by manually setting the value of one of its members. For example, we can start the previous example at 1 instead of 0:
+            Color {
+                Red = 1,
+                Green,
+                Blue,
+            }
+            let c: Color = Color.Green;
+    unknown
+        We may need to describe the type of variables that we do not know when we are writing an application. These values may come from dynamic content – e.g. from the user – or we may want to intentionally accept all values in our API. In these cases, we want to provide a type that tells the compiler and future readers that this variable could be anything, so we give it the unknown type.
+    any
+        In some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking. To do so, we label these values with the any type
+
+    void
+        us commonly used with return types for function that do not return a value
+    null and undefined
+        In TypeScript, both undefined and null actually have their types named undefined and null respectively. Much like void, they’re not extremely useful on their own
+    never
+
+    object
+    RegExp
+        Holds regular expressions
