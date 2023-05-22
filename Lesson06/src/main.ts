@@ -1,9 +1,11 @@
 class Coder {
-
+    // if you use access modifiers in the constructor, it will automatically assign the property and you 
+    // don't have to declare it above you also don't have to initialize it in the constructor 
     constructor(
         public readonly name: string, 
         public music: string, 
         private age: number, 
+        // Is optional and has a default value
         protected lang: string = 'Typescript') {}
     code() {
         console.log(`${this.name} is coding`);

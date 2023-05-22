@@ -59,3 +59,9 @@ Typescript datatypes include:
     object
     RegExp
         Holds regular expressions
+    
+
+    
+    
+
+    

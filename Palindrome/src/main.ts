@@ -28,7 +28,6 @@ function isPalindrome3(str: string): boolean {
     return true;
 }
 
-
 let word = 'tacocat';
 let notWord = 'hello';
 console.log(isPalindrome(word));
